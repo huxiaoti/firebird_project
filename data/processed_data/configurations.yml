@@ -1,0 +1,48 @@
+# author: Wu Shiauthie
+# date: 2022.4.1
+
+# Community detection
+threshold: 3
+
+# Stone parameters
+seed: 555
+train_rate: 0.8
+cuda: True
+dropout: 0.3
+
+# model parameters
+lr: 0.001
+weight_decay_parm: 0.005
+max_iteration: 500
+warmup_iteration: 20
+batch_size: 128
+
+# WeightGCN
+dim_hid_GCN: 128
+
+# SwinTransformer
+img_size_Swin: 96
+patch_size_Swin: 8
+window_size_Swin: 8
+dim_outchannel_Swin: 24 # must be divisible for all the head numbers
+depths_Swin: [2, 2, 2]
+num_head_Swin: [3, 3, 3]
+dim_out_Swin: 100
+
+# RGCN
+dim_hid_RGCN: 32
+num_bases_RGCN: 30
+num_layer_RGCN: 2
+dim_out_RGCN: 25
+
+# GAT
+multi_graphs: ['Chem_Chem', 'Chem_DGidbGene', 'Chem_DGodbGene', 'Chem_String', 'Chem_Chem', 'Chem_DisGene', 'Chem_CombGene', 'Chem_CombDisGene']
+dim_hid_GAT: 50
+dim_out_GAT: 25
+num_head_GAT: 3
+alpha: 0.2 # Alpha for the leaky_relu activation function
+
+# Transformer
+num_layer_Trans: 1
+num_head_Trans: 4
+dim_head_Trans: 32
