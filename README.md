@@ -2,4 +2,4 @@
 
 ## Overview
 ![alt text](documentation/s1.svg)
-![alt text](documentation/s2.svg)
+![alt text](documentation/s3.svg)
